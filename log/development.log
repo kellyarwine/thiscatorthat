@@ -37969,3 +37969,1867 @@ Served asset /cats.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-17 21:00:16 -0400
 Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 11:02:09 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (15.9ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.3ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (8.5ms)
+Compiled cats.css  (57ms)  (pid 15060)
+Compiled home.css  (1ms)  (pid 15060)
+Compiled scaffolds.css  (20ms)  (pid 15060)
+Compiled application.css  (105ms)  (pid 15060)
+Compiled jquery.js  (2ms)  (pid 15060)
+Compiled jquery_ujs.js  (0ms)  (pid 15060)
+Compiled cats.js  (177ms)  (pid 15060)
+Compiled home.js  (91ms)  (pid 15060)
+Compiled application.js  (341ms)  (pid 15060)
+Completed 200 OK in 584ms (Views: 507.1ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:10 -0600
+Served asset /cats.css - 200 OK (7ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:10 -0600
+Served asset /home.css - 200 OK (2ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:10 -0600
+Served asset /cats.js - 200 OK (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:10 -0600
+Served asset /home.js - 200 OK (35ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:10 -0600
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:10 -0600
+Served asset /application.css - 200 OK (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:10 -0600
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:10 -0600
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:10 -0600
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/cat/15/14" for 127.0.0.1 at 2013-01-14 11:02:16 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"15", "cat2_id"=>"14"}
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  UPDATE "cats" SET "totalvotes" = 14, "yesvotes" = 8, "updated_at" = '2013-01-14 17:02:16.708526' WHERE "cats"."id" = 15
+[paperclip] Saving attachments.
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 9, "updated_at" = '2013-01-14 17:02:16.752973' WHERE "cats"."id" = 14[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 52ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 11:02:16 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:16 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:16 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:16 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:16 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:16 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/15/14" for 127.0.0.1 at 2013-01-14 11:02:20 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"15", "cat2_id"=>"14"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 15, "yesvotes" = 9, "updated_at" = '2013-01-14 17:02:20.608721' WHERE "cats"."id" = 15
+[paperclip] Saving attachments.
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 10, "updated_at" = '2013-01-14 17:02:20.611605' WHERE "cats"."id" = 14[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 11:02:20 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:20 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:20 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:20 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:20 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:20 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:20 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:20 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:20 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:20 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/15/17" for 127.0.0.1 at 2013-01-14 11:02:23 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"15", "cat2_id"=>"17"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 16, "yesvotes" = 10, "updated_at" = '2013-01-14 17:02:23.056659' WHERE "cats"."id" = 15
+[paperclip] Saving attachments.
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 14, "updated_at" = '2013-01-14 17:02:23.061558' WHERE "cats"."id" = 17[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 11:02:23 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:23 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:23 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:23 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:23 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:23 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:23 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:23 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:23 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:23 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/16/15" for 127.0.0.1 at 2013-01-14 11:02:25 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"16", "cat2_id"=>"15"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "15"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "cats" SET "totalvotes" = 12, "yesvotes" = 12, "updated_at" = '2013-01-14 17:02:25.300760' WHERE "cats"."id" = 16
+[paperclip] Saving attachments.
+  [1m[36m (18.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 17, "updated_at" = '2013-01-14 17:02:25.322846' WHERE "cats"."id" = 15[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 21.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 11:02:25 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:25 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:25 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:25 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:25 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:25 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:25 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:25 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:25 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:25 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/15/16" for 127.0.0.1 at 2013-01-14 11:02:26 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"15", "cat2_id"=>"16"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "cats" SET "totalvotes" = 18, "yesvotes" = 11, "updated_at" = '2013-01-14 17:02:26.759540' WHERE "cats"."id" = 15
+[paperclip] Saving attachments.
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 13, "updated_at" = '2013-01-14 17:02:26.767834' WHERE "cats"."id" = 16[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 11:02:26 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:26 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:26 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:26 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:26 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:26 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:26 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:26 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:26 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:26 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/16/14" for 127.0.0.1 at 2013-01-14 11:02:27 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"16", "cat2_id"=>"14"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "cats" SET "totalvotes" = 14, "yesvotes" = 13, "updated_at" = '2013-01-14 17:02:27.692800' WHERE "cats"."id" = 16
+[paperclip] Saving attachments.
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 11, "updated_at" = '2013-01-14 17:02:27.701013' WHERE "cats"."id" = 14[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 11:02:27 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:27 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:27 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:27 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:27 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:27 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:27 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:27 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:27 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:27 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/17/14" for 127.0.0.1 at 2013-01-14 11:02:28 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"17", "cat2_id"=>"14"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 15, "yesvotes" = 5, "updated_at" = '2013-01-14 17:02:28.492103' WHERE "cats"."id" = 17
+[paperclip] Saving attachments.
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 12, "updated_at" = '2013-01-14 17:02:28.495442' WHERE "cats"."id" = 14[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 11:02:28 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 51ms (Views: 47.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:28 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:28 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:28 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:28 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:28 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:28 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:28 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:28 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:28 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/14/17" for 127.0.0.1 at 2013-01-14 11:02:29 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"14", "cat2_id"=>"17"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 13, "yesvotes" = 6, "updated_at" = '2013-01-14 17:02:29.238003' WHERE "cats"."id" = 14
+[paperclip] Saving attachments.
+  [1m[36m (18.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 16, "updated_at" = '2013-01-14 17:02:29.259925' WHERE "cats"."id" = 17[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 20.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 11:02:29 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:29 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:29 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:29 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:29 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:29 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:29 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:29 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:29 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:29 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/14/16" for 127.0.0.1 at 2013-01-14 11:02:30 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"14", "cat2_id"=>"16"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 14, "yesvotes" = 7, "updated_at" = '2013-01-14 17:02:30.049228' WHERE "cats"."id" = 14
+[paperclip] Saving attachments.
+  [1m[36m (27.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 15, "updated_at" = '2013-01-14 17:02:30.079007' WHERE "cats"."id" = 16[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 35ms (ActiveRecord: 29.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 11:02:30 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:30 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:30 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:30 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 11:02:30 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:30 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:30 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:30 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:30 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 11:02:30 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/14/17" for 127.0.0.1 at 2013-01-14 11:31:16 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"14", "cat2_id"=>"17"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  UPDATE "cats" SET "totalvotes" = 15, "yesvotes" = 8, "updated_at" = '2013-01-14 17:31:16.585113' WHERE "cats"."id" = 14
+[paperclip] Saving attachments.
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 17, "updated_at" = '2013-01-14 17:31:16.589511' WHERE "cats"."id" = 17[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 11:31:16 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 11:31:16 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 11:31:16 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 11:31:16 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 11:31:16 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 11:31:16 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 11:31:16 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 11:31:16 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 11:31:16 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 11:31:16 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/16/17" for 127.0.0.1 at 2013-01-14 11:31:18 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"16", "cat2_id"=>"17"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 16, "yesvotes" = 14, "updated_at" = '2013-01-14 17:31:18.314044' WHERE "cats"."id" = 16
+[paperclip] Saving attachments.
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 18, "updated_at" = '2013-01-14 17:31:18.317366' WHERE "cats"."id" = 17[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 11:31:18 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 11:31:18 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 11:31:18 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 11:31:18 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 11:31:18 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 11:31:18 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 11:31:18 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 11:31:18 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 11:31:18 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 11:31:18 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2013-01-14 14:12:14 -0600
+Processing by CatsController#new as HTML
+  Rendered cats/_form.html.erb (1226.0ms)
+  Rendered cats/new.html.erb within layouts/application (1992.5ms)
+Completed 200 OK in 2347ms (Views: 2206.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:12:17 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:12:17 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:12:17 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:12:17 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:12:17 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:12:17 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:12:17 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:12:17 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:12:17 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:15:30 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 95ms (Views: 24.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:15:30 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:15:30 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:15:30 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:15:30 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:15:30 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:15:30 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:15:30 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:15:30 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:15:30 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:15:33 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.6ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.3ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 57ms (Views: 14.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:15:34 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:15:34 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:15:34 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:15:34 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:15:34 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:15:34 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:15:34 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:15:34 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:15:34 -0600
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:16:33 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:34 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:34 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:34 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:34 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:34 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:34 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:34 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:34 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:34 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/17/16" for 127.0.0.1 at 2013-01-14 14:16:46 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"17", "cat2_id"=>"16"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (21.5ms)[0m  UPDATE "cats" SET "totalvotes" = 19, "yesvotes" = 6, "updated_at" = '2013-01-14 20:16:47.025872' WHERE "cats"."id" = 17
+[paperclip] Saving attachments.
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 17, "updated_at" = '2013-01-14 20:16:47.058204' WHERE "cats"."id" = 16[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 25.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:16:47 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.3ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 74ms (Views: 69.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:47 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:47 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:47 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:47 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:47 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:47 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:47 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:47 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:47 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/17/16" for 127.0.0.1 at 2013-01-14 14:16:49 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"17", "cat2_id"=>"16"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 20, "yesvotes" = 7, "updated_at" = '2013-01-14 20:16:49.857795' WHERE "cats"."id" = 17
+[paperclip] Saving attachments.
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 18, "updated_at" = '2013-01-14 20:16:49.860987' WHERE "cats"."id" = 16[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:16:49 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:49 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:49 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:49 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:49 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:49 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:49 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:49 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:49 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:49 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/17/14" for 127.0.0.1 at 2013-01-14 14:16:50 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"17", "cat2_id"=>"14"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  UPDATE "cats" SET "totalvotes" = 21, "yesvotes" = 8, "updated_at" = '2013-01-14 20:16:50.612664' WHERE "cats"."id" = 17
+[paperclip] Saving attachments.
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 16, "updated_at" = '2013-01-14 20:16:50.618638' WHERE "cats"."id" = 14[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:16:50 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:50 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:50 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:50 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:50 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:50 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:50 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:50 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:50 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:50 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/17/16" for 127.0.0.1 at 2013-01-14 14:16:51 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"17", "cat2_id"=>"16"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 22, "yesvotes" = 9, "updated_at" = '2013-01-14 20:16:51.414846' WHERE "cats"."id" = 17
+[paperclip] Saving attachments.
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 19, "updated_at" = '2013-01-14 20:16:51.418417' WHERE "cats"."id" = 16[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:16:51 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:51 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:51 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:51 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:51 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:51 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:51 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:51 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:51 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:51 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/17/16" for 127.0.0.1 at 2013-01-14 14:16:53 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"17", "cat2_id"=>"16"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 23, "yesvotes" = 10, "updated_at" = '2013-01-14 20:16:53.202949' WHERE "cats"."id" = 17
+[paperclip] Saving attachments.
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 20, "updated_at" = '2013-01-14 20:16:53.206844' WHERE "cats"."id" = 16[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:16:53 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:53 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:53 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:53 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:53 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:53 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:53 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:53 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:53 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/17/16" for 127.0.0.1 at 2013-01-14 14:16:57 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"17", "cat2_id"=>"16"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 24, "yesvotes" = 11, "updated_at" = '2013-01-14 20:16:57.015816' WHERE "cats"."id" = 17
+[paperclip] Saving attachments.
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 21, "updated_at" = '2013-01-14 20:16:57.019670' WHERE "cats"."id" = 16[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:16:57 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:57 -0600
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:57 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:57 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:57 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:57 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:57 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:57 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:57 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:57 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/14/15" for 127.0.0.1 at 2013-01-14 14:16:59 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"14", "cat2_id"=>"15"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "15"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 17, "yesvotes" = 9, "updated_at" = '2013-01-14 20:16:59.679396' WHERE "cats"."id" = 14
+[paperclip] Saving attachments.
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 19, "updated_at" = '2013-01-14 20:16:59.683289' WHERE "cats"."id" = 15[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:16:59 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:59 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:59 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:59 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:59 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:16:59 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:59 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:59 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:16:59 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/14/17" for 127.0.0.1 at 2013-01-14 14:17:00 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"14", "cat2_id"=>"17"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 18, "yesvotes" = 10, "updated_at" = '2013-01-14 20:17:00.610760' WHERE "cats"."id" = 14
+[paperclip] Saving attachments.
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 25, "updated_at" = '2013-01-14 20:17:00.613863' WHERE "cats"."id" = 17[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:17:00 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:00 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:00 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:00 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:00 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:00 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:00 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:00 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:00 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/15/17" for 127.0.0.1 at 2013-01-14 14:17:02 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"15", "cat2_id"=>"17"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  UPDATE "cats" SET "totalvotes" = 20, "yesvotes" = 12, "updated_at" = '2013-01-14 20:17:02.881996' WHERE "cats"."id" = 15
+[paperclip] Saving attachments.
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 26, "updated_at" = '2013-01-14 20:17:02.887612' WHERE "cats"."id" = 17[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:17:02 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:02 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:02 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:02 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:02 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:02 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:02 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:03 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:03 -0600
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/cat/17/16" for 127.0.0.1 at 2013-01-14 14:17:04 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"17", "cat2_id"=>"16"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 27, "yesvotes" = 12, "updated_at" = '2013-01-14 20:17:04.806422' WHERE "cats"."id" = 17
+[paperclip] Saving attachments.
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 22, "updated_at" = '2013-01-14 20:17:04.809870' WHERE "cats"."id" = 16[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:17:04 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:04 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:04 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:04 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:04 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:04 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:04 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:04 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:04 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/15/17" for 127.0.0.1 at 2013-01-14 14:17:07 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"15", "cat2_id"=>"17"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 21, "yesvotes" = 13, "updated_at" = '2013-01-14 20:17:07.119473' WHERE "cats"."id" = 15
+[paperclip] Saving attachments.
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 28, "updated_at" = '2013-01-14 20:17:07.122514' WHERE "cats"."id" = 17[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 41ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:17:07 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:07 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:07 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:07 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:07 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:07 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:07 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:07 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:07 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/15/17" for 127.0.0.1 at 2013-01-14 14:17:08 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"15", "cat2_id"=>"17"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "cats" SET "totalvotes" = 22, "yesvotes" = 14, "updated_at" = '2013-01-14 20:17:08.957696' WHERE "cats"."id" = 15
+[paperclip] Saving attachments.
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 29, "updated_at" = '2013-01-14 20:17:08.960616' WHERE "cats"."id" = 17[0m
+[paperclip] Saving attachments.
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:17:08 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:09 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:09 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:09 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:09 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:09 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:09 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:09 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:09 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cat/15/17" for 127.0.0.1 at 2013-01-14 14:17:10 -0600
+Processing by CatsController#yes_vote as HTML
+  Parameters: {"cat1_id"=>"15", "cat2_id"=>"17"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "cats" SET "totalvotes" = 23, "yesvotes" = 15, "updated_at" = '2013-01-14 20:17:10.279172' WHERE "cats"."id" = 15
+[paperclip] Saving attachments.
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "cats" SET "totalvotes" = 30, "updated_at" = '2013-01-14 20:17:10.281690' WHERE "cats"."id" = 17[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:17:10 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:10 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:10 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:10 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:10 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:17:10 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:10 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:10 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:17:10 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:18:45 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 209ms (Views: 131.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:18:46 -0600
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:18:46 -0600
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:18:46 -0600
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:18:46 -0600
+Served asset /cats.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:18:46 -0600
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:18:46 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:18:46 -0600
+Served asset /cats.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:18:46 -0600
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:18:46 -0600
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:23:26 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:23:26 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:23:26 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:23:26 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:23:26 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:23:26 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:23:26 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:23:26 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:23:26 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:23:26 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:23:47 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:23:47 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:23:47 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:23:47 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:23:47 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:23:47 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:23:47 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:23:47 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:23:47 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:23:47 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:24:16 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:24:17 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:24:17 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:24:17 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:24:17 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:24:17 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:24:17 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:24:17 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:24:17 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:24:17 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-14 14:24:30 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-14 14:24:30 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-14 14:24:30 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-14 14:24:30 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-14 14:24:30 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-14 14:24:30 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-14 14:24:30 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-14 14:24:30 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-14 14:24:30 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-14 14:24:30 -0600
+Served asset /application.js - 304 Not Modified (0ms)
