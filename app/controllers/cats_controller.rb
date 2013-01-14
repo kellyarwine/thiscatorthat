@@ -6,8 +6,8 @@ class CatsController < ApplicationController
     @cat1, @cat2 = Cat.two_random_cats
     p @cat1
     p @cat2
-    p @cat2
     @top_cat = Cat.top_cat
+    @cats = Cat.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @cats }

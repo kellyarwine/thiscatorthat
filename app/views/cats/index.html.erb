@@ -11,20 +11,29 @@
 </tr>
   <tr>
   	<td>
-    <img height="600" width="600" src=<%= @cat2.picture.url%>>
+    <%= link_to image_tag(@cat2.picture.url, :size => "600x600"), cat_yes_path(@cat2.id, @cat1.id) %>
     </td>
     <td>
-    <img height="600" width="600" src=<%= @cat1.picture.url%>>
+    <%= link_to image_tag(@cat1.picture.url, :size => "600x600"), cat_yes_path(@cat1.id, @cat2.id) %>
     </td>
 </tr>
 </table>
 <br/><br/>
-<h2>Most Votes</h2><!--<%= @top_cat.picture.url%><br>-->
-<img height="600" width="600" src=<%= @top_cat.picture.url%>>
+<h2>Top Cat Leaderboard:</h2>
+<ol>
+<% @top_cat.each do |cat| %>
+<table>
+<tr><td><%= image_tag cat.picture.url, :size => "200x200" %></td>
+  <td><%= cat.yesvotes %> Votes</td></tr>
+<% end %>
+</table>
 
 
 <br/>
 
 
 <br/>
-<h1><%= link_to "New Cat", new_cat_path%></h1>
+<% @cats.each do |cat| %>
+<%= link_to (image_tag cat.picture.url, :size => '100x100'), cat %>
+<% end %>
+<h4><%= link_to "New Cat", new_cat_path%></h4> |
